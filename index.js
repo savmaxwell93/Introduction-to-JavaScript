@@ -19,10 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 17
+const votingAge = 18
 
 if(votingAge >= 18){
-  console.log('true')
+  console.log(true);
+}else{
+  console.log(false);
 }
 
 
@@ -36,14 +38,16 @@ Do the following:
 
    HINT: no function required
 */
-let firstVar = 2;
-let secondVar = 8;
+let cat = 'Ash';
+let illness = 'Cancer';
 
-if(firstVar === 2){
-  firstVar = firstVar + secondVar;
-  console.log(firstVar);
+if(illness === 'Cancer'){
+  cat = 'Ash';
+}else{
+  cat = 'Einstein';
 }
 
+console.log(cat);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -78,7 +82,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-multiply(7, 8);
+console.log(multiply(7, 8));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -95,7 +99,7 @@ function dogYears(age){
   return age * 7;
 }
 
-dogYears(28);
+console.log(dogYears(28));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -167,31 +171,29 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-let computerChoice = Math.floor(Math.random() * 3);
-
+let computer = Math.floor(Math.random() * 3);
+if(computer === 0){
+  computer = 'rock';
+}else if(computer === 1){
+  computer = 'paper';
+}else if(computer === 2){
+  computer = 'scissors';
+}
 function game(user, computer){
-  if(user === 'scissors' && computer === 'paper'){
+  if(user === computer){
+    return 'it\'s a tie';
+  }else if (user === 'scissors' && computer === 'paper'){
     return 'you win!';
-  }else if(user === 'scissors' && computer === 'rock'){
-    return 'you lose!';
-  }else if (user === 'scissors' && computer === 'scissors'){
-    return 'it\'s a tie';
-  }else if(user === 'paper' && computer === 'paper'){
-    return 'it\'s a tie';
   }else if(user === 'paper' && computer === 'rock'){
     return 'you win!';
-  }else if (user === 'paper' && computer === 'scissors'){
-    return 'you lose!';
-  }else if(user === 'rock' && computer === 'paper'){
-    return 'you lose!';
-  }else if(user === 'rock' && computer === 'rock'){
-    return 'it\'s a tie';
   }else if (user === 'rock' && computer === 'scissors'){
     return 'you win!';
+  }else{
+    return 'you lose!'
   }
 }
 
-
+console.log(game('paper', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -208,6 +210,7 @@ function miles(KM){
   return KM * 0.621371;
 }
 
+console.log(miles(5));
 
 //Task 5b - Feet to CM
 /*
@@ -221,7 +224,7 @@ function feet(CM){
   return CM / 30.48;
 }
 
-
+console.log(feet(24));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -234,8 +237,8 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(startNum){
-      for(let i = startNum; i >= 0; i--){
-        return `${startNum} bottles of soda on the wall, ${startNum} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+      for(let i = startNum; i > 0; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
       }
 }
 console.log(annoyingSong(5));
@@ -269,7 +272,7 @@ if(score >= 90 && score <= 100){
 }
 }
 
-
+console.log(grade(95));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
