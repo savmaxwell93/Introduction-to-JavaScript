@@ -19,7 +19,11 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 17
 
+if(votingAge >= 18){
+  console.log('true')
+}
 
 
 /*
@@ -32,9 +36,13 @@ Do the following:
 
    HINT: no function required
 */
+let firstVar = 2;
+let secondVar = 8;
 
-
-
+if(firstVar === 2){
+  firstVar = firstVar + secondVar;
+  console.log(firstVar);
+}
 
 
 /*
@@ -47,7 +55,14 @@ Do the following:
 
    HINT: look up the Number method
 */
+let stringVar = '1999';
 
+if(stringVar = '1999'){
+  stringVar = Number(stringVar);
+  console.log(stringVar);
+}
+
+console.log(Number(stringVar));
 
 
 
@@ -60,10 +75,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
-
+multiply(7, 8);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,10 +91,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
+dogYears(28);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -103,7 +119,7 @@ Adult Dogs 1 year and older
 
 Puppies less than 1 year
    2 - 4 months 10% of their body weight
-   4 - 7 months 5% of their body weight 
+   4 - 6 months 5% of their body weight 
    7 - 12 months 4% of their body weight
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
