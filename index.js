@@ -175,7 +175,19 @@ function game(user, computer){
   }else if(user === 'scissors' && computer === 'rock'){
     return 'you lose!';
   }else if (user === 'scissors' && computer === 'scissors'){
-    return 'it\'s a tie!';
+    return 'it\'s a tie';
+  }else if(user === 'paper' && computer === 'paper'){
+    return 'it\'s a tie';
+  }else if(user === 'paper' && computer === 'rock'){
+    return 'you win!';
+  }else if (user === 'paper' && computer === 'scissors'){
+    return 'you lose!';
+  }else if(user === 'rock' && computer === 'paper'){
+    return 'you lose!';
+  }else if(user === 'rock' && computer === 'rock'){
+    return 'it\'s a tie';
+  }else if (user === 'rock' && computer === 'scissors'){
+    return 'you win!';
   }
 }
 
